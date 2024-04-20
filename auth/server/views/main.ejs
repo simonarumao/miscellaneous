@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <style>
+       .navbar {
+	width: 100%;
+	height: 70px;
+	background-color: #3bb19b;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar h1 {
+	color: white;
+	font-size: 25px;
+	margin-left: 20px;
+}
+
+.white_btn {
+	border: none;
+	outline: none;
+	padding: 12px 0;
+	background-color: white;
+	border-radius: 20px;
+	width: 120px;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	margin-right: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="main_container">
+        <nav class="navbar">
+            <h1>fakebook</h1>
+            <button class="white_btn" onclick="handleLogout()">Logout</button>
+        </nav>
+    </div>
+
+    <script>
+        function handleLogout() {
+            localStorage.removeItem("token");
+            window.location.href = '/login';
+        }
+    </script>
+</body>
+</html>
