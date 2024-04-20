@@ -1,0 +1,95 @@
+/* styles.css */
+
+/* Reset default styles */
+
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+  }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+  }
+  h1{
+    font-size: 50px;
+    font-family: 'Rocher';
+    text-align: center;
+  
+    align-items: center;
+    justify-content: center;
+  }
+  @font-palette-values --Purples {
+    font-family: Rocher;
+    base-palette: 9;
+  }
+  .purples {
+    font-palette: --Mint;
+  }
+  
+  /* Video background container */
+  .video-background {
+    position: relative;
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+  }
+  
+  /* Overlay to darken the video */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  }
+  
+  /* Video styling */
+  #video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+  }
+  
+  /* Content styling */
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    color: white;
+  }
+  
+  .content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:#28282B;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: background-color 0.7s ease;
+  }
+  
+  .btn:hover {
+    background-color: White;
+    color: #28282B;
+  }
+  
