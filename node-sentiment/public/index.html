@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height to Weight Prediction</title>
+</head>
+<body>
+    <h2>Enter your height:</h2>
+    <form id="predictionForm">
+        <input type="text" id="heightInput" placeholder="Enter height in cm">
+        <button type="submit">Predict Weight</button>
+    </form>
+    <div id="predictionResult"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        document.getElementById('predictionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const height = document.getElementById('heightInput').value;
+
+            axios.post('/predictWeight', { height: height })
+                .then(response => {
+                    document.getElementById('predictionResult').innerText = `Predicted weight: ${response.data}`;
+                })
+                .catch(error => {
+                    console.error('Error predicting weight:', error);
+                    document.getElementById('predictionResult').innerText = 'Error predicting weight';
+                });
+        });
+    </script>
+</body>
+</html>

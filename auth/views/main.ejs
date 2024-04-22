@@ -42,11 +42,34 @@
         </nav>
     </div>
 
-    <script>
-        function handleLogout() {
+	<div>
+		<p>
+			new Project
+		</p>
+		<h1> yes new project </h1>
+		<div id="google_translate_element"></div>
+	</div>
+  
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+     
+	<script> 
+	function handleLogout() {
             localStorage.removeItem("token");
             window.location.href = '/login';
         }
+
+	function googleTranslateElementInit()
+	{
+		new google.translate.TranslateElement (
+			{pageLanguage:'en'},
+			'google_translate_element'
+	);
+	}
+
+
+
+
     </script>
+	<p>Kindly support to my channel</p>
 </body>
 </html>
